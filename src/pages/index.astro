@@ -1,11 +1,40 @@
 ---
+import ArtDisplayer from '../components/ArtDisplayer'
 import Welcome from '../components/Welcome.astro'
 import Layout from '../layouts/Layout.astro'
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
   <Welcome />
+  <ArtDisplayer client:load />
+  <section
+    class="flex min-h-screen items-center justify-center bg-stone-100 text-stone-800"
+  >
+    <div class="mx-auto max-w-5xl p-2">
+      <div class="grid items-center gap-16 md:grid-cols-2">
+        <div class="relative aspect-[3/4]">
+          <img
+            class="object-cover"
+            src="https://artes-inclusion.netlify.app/alan.jpg"
+            alt="Alan portrait"
+          />
+        </div>
+
+        <article class="max-w-2xl space-y-6">
+          <h1 class="font-serif text-3xl">Arte Sin Límites</h1>
+          <p class="text-lg leading-relaxed text-gray-700">
+            Alan es el único mexicano con síndrome de down que es reconocido a
+            nivel internacional como artista plástico independiente y como tal,
+            el mejor referéndum para inspirar y punta de lanza en sensibilizar a
+            la sociedad.
+          </p>
+          <p class="text-lg leading-relaxed text-gray-700">
+            El arte nos enseña que no hay límites para la creatividad, que cada
+            persona tiene formas únicas de interpretar el mundo y compartir su
+            visión, enriqueciendo la experiencia colectiva.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
 </Layout>
