@@ -49,7 +49,7 @@ export default function ArtDisplayer() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col items-center bg-stone-100 font-serif text-stone-800">
+    <div className="flex min-h-screen flex-col items-center font-serif text-stone-800">
       <div className="mx-auto max-w-3xl px-4 py-4">
         {/* Header */}
         <header className="mb-14 text-center">
