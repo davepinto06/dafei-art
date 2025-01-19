@@ -1,36 +1,9 @@
 ---
 import ArtDisplayer from '../components/ArtDisplayer'
-import Card from '../components/Card'
+import CardsDisplayer from '../components/CardsDisplayer'
 import Welcome from '../components/Welcome.astro'
 import Layout from '../layouts/Layout.astro'
 import { ChevronDown } from 'lucide-react'
-
-const cards = [
-  {
-    id: 1,
-    title: 'TIC',
-    description:
-      'Las TIC son las Tecnologías de la Información y Comunicación. Con su utilización se puede favorecer el alcanzar una educación de calidad, y eliminar las barreras que impiden el acercamiento de todas las personas al hecho educativo.',
-    startingLeft: true,
-    style: 'from-blue-50 to-blue-100 text-blue-800',
-  },
-  {
-    id: 2,
-    title: 'TAC',
-    description:
-      'Cuando las TIC se utilizan dentro de la educación pasan a ser Tecnologías para el aprendizaje y el conocimiento (TAC), un aspecto importante de estas es su capacidad para adaptar el contenido educativo a las necesidades individuales de los estudiantes.',
-    startingLeft: false,
-    style: 'from-green-50 to-green-100 text-green-800',
-  },
-  {
-    id: 3,
-    title: 'TEP',
-    description:
-      'Las TEP son la última etapa en la evolución, enfocándose en cómo las tecnologías pueden empoderar a los estudiantes y fomentar su participación activa en la sociedad. Mientras que las TIC facilitan la comunicación y las TAC mejoran el aprendizaje, las TEP buscan que los estudiantes utilicen su conocimiento para impactar en el mundo de manera positiva.',
-    startingLeft: true,
-    style: 'from-purple-50 to-purple-100 text-purple-800',
-  },
-]
 ---
 
 <Layout>
@@ -75,18 +48,8 @@ const cards = [
       <ChevronDown className="size-8 animate-bounce sm:size-10" />
     </div>
   </section>
-  <section class="mx-auto max-w-4xl space-y-32 px-6 py-20">
-    {
-      cards.map((c) => (
-        <Card
-          title={c.title}
-          description={c.description}
-          number={c.id}
-          startingLeft={c.startingLeft}
-          style={c.style}
-        />
-      ))
-    }
+  <section class="mx-auto max-w-4xl px-6 py-20">
+    <CardsDisplayer client:load />
   </section>
   <section class="grid min-h-screen grid-cols-1 grid-rows-[0.3fr_1.7fr]">
     <div class="flex items-center justify-center">
