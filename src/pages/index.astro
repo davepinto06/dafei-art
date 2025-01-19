@@ -1,6 +1,7 @@
 ---
 import ArtDisplayer from '../components/ArtDisplayer'
 import CardsDisplayer from '../components/CardsDisplayer'
+import InclusionExamples from '../components/InclusionExamples'
 import Welcome from '../components/Welcome.astro'
 import Layout from '../layouts/Layout.astro'
 import { ChevronDown } from 'lucide-react'
@@ -48,22 +49,10 @@ import { ChevronDown } from 'lucide-react'
       <ChevronDown className="size-8 animate-bounce sm:size-10" />
     </div>
   </section>
-  <section class="mx-auto max-w-4xl px-6 py-20">
+  <section class="mx-auto max-w-5xl px-6 py-20">
     <CardsDisplayer client:load />
   </section>
-  <section class="grid min-h-screen grid-cols-1 grid-rows-[0.3fr_1.7fr]">
-    <div class="flex items-center justify-center">
-      <h1 class="font-serif text-5xl font-bold">Mas información</h1>
-    </div>
-    <div class="flex items-center justify-around">
-      <div class="flex size-96 items-center justify-center rounded bg-red-200">
-        Video1
-      </div>
-      <div
-        class="flex size-96 items-center justify-center rounded bg-purple-200"
-      >
-        Video2
-      </div>
-    </div>
+  <section class="mx-auto max-w-5xl px-6 py-20">
+    <InclusionExamples client:load />
   </section>
 </Layout>
