@@ -32,6 +32,7 @@ export default function CardsDisplayer() {
     <section className="space-y-32">
       {cards.map((c) => (
         <motion.div
+          key={c.id}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
