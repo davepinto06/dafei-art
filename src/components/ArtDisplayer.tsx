@@ -6,8 +6,7 @@ export default function ArtDisplayer() {
       id: 1,
       title: 'Renacimiento',
       description: `Renacimiento es el nombre dado en el siglo XIX a un amplio movimiento cultural que se produjo en Europa Occidental durante los siglos XV y XVI. Fue un periodo de transición entre la Edad Media y los inicios de la Edad Moderna. Sus principales exponentes se hallan en el campo de las artes, aunque también se produjo una renovación en las ciencias, tanto naturales como humanas.`,
-      imgUrl:
-        'https://blogimages.musement.com/2020/11/pintores-renacentistas-243830470.jpg',
+      imgUrl: 'https://images.dafei.es/adan-creacion.jpg',
       imgAlt: 'La creación de Adán',
       century: 'Siglo XVI',
     },
@@ -23,17 +22,15 @@ export default function ArtDisplayer() {
                 Europa occidental, aunque debido al colonialismo también se dio en
                 numerosas colonias de las potencias europeas, principalmente en
                 Iberoamérica.`,
-      imgUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/The_Calling_of_Saint_Matthew-Caravaggo_%281599-1600%29.jpg/640px-The_Calling_of_Saint_Matthew-Caravaggo_%281599-1600%29.jpg',
-      imgAlt: 'La Vocación de San Mateo',
+      imgUrl: 'https://images.dafei.es/five-senses.jpg',
+      imgAlt: 'The Five Senses with Flowers',
       century: 'Siglo XVII',
     },
     {
       id: 3,
       title: 'Impresionismo',
       description: `El impresionismo es un movimiento artístico inicialmente definido para la pintura impresionista, a partir del comentario despectivo de un crítico de arte (Louis Leroy) ante el cuadro Impresión, sol naciente de Claude Monet. El movimiento plástico impresionista se desarrolló a partir de la segunda mitad del siglo XIX en Europa —principalmente en Normandía (Giverny y la costa normanda principalmente)— caracterizado, a grandes rasgos, por el intento de plasmar la luz (la «impresión» visual) y el instante, sin reparar en la identidad de aquello que la proyectaba.`,
-      imgUrl:
-        'https://definicion.com/wp-content/uploads/2023/02/impresionismo-cielo-estrellado.jpg',
+      imgUrl: 'https://images.dafei.es/impresionismo-cielo-estrellado.jpg',
       imgAlt: 'La noche estrellada',
       century: 'Siglo XIX',
     },
@@ -60,12 +57,12 @@ export default function ArtDisplayer() {
         {/* Main Content */}
         <main className="space-y-12">
           {/* Image Section */}
-          <section className="flex items-start justify-center">
+          <section className="flex min-h-[600px] items-start justify-center">
             <div className="relative flex flex-col items-center">
               <img
                 src={currentPeriod.imgUrl}
                 alt="La Vocación de San Mateo"
-                className="rounded-sm"
+                className="aspect-[4/3] rounded-sm object-scale-down"
               />
               <p className="mt-1 text-center text-sm italic">
                 {currentPeriod.imgAlt}
