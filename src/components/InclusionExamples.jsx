@@ -33,8 +33,8 @@ export default function InclusionExamples() {
           <div className="mt-8 space-y-6">
             <h3 className="mb-4 font-serif text-2xl">Videos Informativos</h3>
             <div className="grid gap-6 md:grid-cols-2">
-              <VideoDisplayer videoId="dQw4w9WgXcQ" />
-              <VideoDisplayer videoId="dQw4w9WgXcQ" />
+              <VideoDisplayer videoId="2tvFD1p5COw" />
+              <VideoDisplayer videoId="z--eLW1hKp0" />
             </div>
           </div>
         </div>
