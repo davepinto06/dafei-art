@@ -1,9 +1,23 @@
 <div
-  class="flex h-screen items-center justify-center bg-cover bg-center"
-  style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.dafei.es/La_scuola_di_Atene.webp);"
+  class="relative flex h-screen items-center justify-center bg-cover bg-center"
+  style="background-image: url('https://images.dafei.es/atene-low-quality.avif');"
 >
+  <!-- Gradient Layer with Blending -->
+  <div
+    class="absolute left-0 top-0 z-40 h-full w-full"
+    style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));"
+  >
+  </div>
+  <!-- Higher Quality Image -->
+  <img
+    src="https://images.dafei.es/atene-regular-quality.avif"
+    class="absolute left-0 top-0 h-full w-full object-cover opacity-0 transition-opacity duration-500"
+    onload="this.style.opacity='1'"
+    alt="La scuola di Atene"
+  />
+  <!-- Content -->
   <article
-    class="m-1 flex flex-col items-center justify-center gap-6 text-white sm:w-1/3"
+    class="relative z-50 m-1 flex flex-col items-center justify-center gap-6 text-white sm:w-1/3"
   >
     <h1 class="px-5 text-center font-['Whisper'] text-6xl italic md:text-9xl">
       pintura
