@@ -57,7 +57,7 @@ export default function ArtDisplayer() {
         {/* Main Content */}
         <main className="space-y-12">
           {/* Image Section */}
-          <section className="flex min-h-[600px] items-start justify-center">
+          <section className="flex items-start justify-center sm:min-h-[600px]">
             <div className="relative flex flex-col items-center">
               <img
                 loading="lazy"
@@ -73,7 +73,7 @@ export default function ArtDisplayer() {
 
           {/* Text Content */}
           <section className="min-h-44 text-justify">
-            <p className="first-letter:float-left first-letter:mr-3 first-letter:text-5xl first-letter:font-bold first-letter:text-black first-line:tracking-widest">
+            <p className="min-h-80 first-letter:float-left first-letter:mr-3 first-letter:text-5xl first-letter:font-bold first-letter:text-black first-line:tracking-widest sm:min-h-0">
               {currentPeriod.description}
             </p>
           </section>
