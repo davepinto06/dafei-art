@@ -1,8 +1,15 @@
+import LiteYouTubeEmbed from 'react-lite-youtube-embed'
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
+
 type VideoDisplayerProps = {
   videoId: string
+  videoTitle: string
 }
 
-export default function VideoDisplayer({ videoId }: VideoDisplayerProps) {
+export default function VideoDisplayer({
+  videoId,
+  videoTitle,
+}: VideoDisplayerProps) {
   return (
     <div>
       <div className="relative">
@@ -12,11 +19,7 @@ export default function VideoDisplayer({ videoId }: VideoDisplayerProps) {
             style={{ marginRight: '0px' }}
           >
             <div className="relative overflow-auto rounded-xl p-8">
-              <iframe
-                className="aspect-video w-full rounded-lg shadow-lg"
-                src={`https://www.youtube.com/embed/${videoId}`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
+              <LiteYouTubeEmbed id={videoId} title={videoTitle} />
             </div>
           </div>
         </div>
